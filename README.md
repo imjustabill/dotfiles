@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-I'm using [https://github.com/thoughtbot/rcm](RCM) for managing my dotfiles. 
+I'm using [RCM](https://github.com/thoughtbot/rcm) for managing my dotfiles. 
