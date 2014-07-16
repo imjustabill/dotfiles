@@ -33,6 +33,8 @@ alias fixmouse='/home/bill/bin/marbleMouse.sh'
 # Open my notes doc in insert mode, at the last line 
 alias notes='vim + -c 'startinsert' ~/Documents/notes'
 
+# I can never figure out how to close emacs, so don't ever let me open it
+alias emacs='telnet nyancat.dakko.us'
 
 function extract()      # Handy Extract Program
 {
@@ -66,7 +68,7 @@ alias tclog='tail -1000f ~/Library/Caches/IntelliJIdea13/tomcat/Unnamed_d3api_2/
 alias sshaws='ssh -i ~/lodo91613.cer ec2-user@vpn.dev.d3banking.com'
 alias sshtc1den='checkVPN && ssh -i ~/lodo91613.cer d3user@192.168.1.25'
 alias sshtc2den='checkVPN && ssh -i ~/lodo91613.cer d3user@192.168.1.26'
-alias sshsite='ssh imjustabill@billeberly.com'
+alias sshsite='mosh imjustabill@billeberly.com'
 
 function checkVPN()
 {
@@ -76,4 +78,13 @@ function checkVPN()
 		echo "Check VPN connection"
 		return 1
 	fi
+}
+
+# prints number of files in each immediate subdirectory
+function sdc()
+{
+    find . -maxdepth 1 -mindepth 1 -type d | while read dir; do
+	    printf "%-25.25s : " "$dir"
+		find "$dir" -type f | wc -l
+	done
 }
