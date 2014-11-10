@@ -64,6 +64,7 @@ function title {
 
 alias udate='date +%s'
 alias tclog='tail -1000f ~/Library/Caches/IntelliJIdea13/tomcat/Unnamed_d3api_2/logs/d3rest-all.log'
+alias tclog-nohist='tail -f ~/Library/Caches/IntelliJIdea13/tomcat/Unnamed_d3api_2/logs/d3rest-all.log'
 
 alias sshaws='ssh -i ~/lodo91613.cer ec2-user@vpn.dev.d3banking.com'
 alias sshtc1den='checkVPN && ssh -i ~/lodo91613.cer d3user@192.168.1.25'
@@ -88,3 +89,5 @@ function sdc()
 		find "$dir" -type f | wc -l
 	done
 }
+
+alias fuck='sudo $(history -p \!\!)' 

@@ -13,6 +13,10 @@ export ELASTICSEARCH_HOME="/usr/local/Cellar/elasticsearch/0.1.1.1/"
 # use the one true editor 
 export EDITOR='vim'
 
+# Start powerline
+#powerline-daemon -q
+#. /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+
 # load my aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
